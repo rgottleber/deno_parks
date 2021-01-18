@@ -14,3 +14,9 @@ jobs:
 
       - name: Scrape
         run: deno run --unstable --allow-net --allow-write --allow-read get_data.ts
+
+      - name: Publish
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_NAME: "main"

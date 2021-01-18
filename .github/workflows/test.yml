@@ -3,14 +3,14 @@ name: Test Deno Model
 on: push
 
 jobs:
-  scrape:
-  name: Scrape-Times
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@main
+  build:
+    name: Scrape-Times
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
 
-    - name: Setup Deno Module
-      uses: denolib/setup-deno@master
+      - name: Setup Deno Module
+        uses: denolib/setup-deno@master
 
-    - name: Scrape
-      run: deno run --unstable --allow-net --allow-write --allow-read get_data.ts
+      - name: Scrape
+        run: deno run --unstable --allow-net --allow-write --allow-read get_data.ts

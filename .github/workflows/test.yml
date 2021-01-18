@@ -1,4 +1,4 @@
-name: Test Deno Model
+name: Scrape Disney Times
 
 on:
   schedule:

@@ -1,9 +1,8 @@
-name: Scrape Disney Times
-
 on:
   schedule:
     - cron: "*/5 * * * *"
 
+name: Scrape Disney Times
 jobs:
   build:
     name: Scrape-Times
